@@ -1,0 +1,23 @@
+{
+    "name": "champion-cooling-systems/dealers",
+    "description": "Dealers plugin for Aureus ERP",
+    "authors": [
+        {
+            "name": "Robert Doll",
+            "email": "robertdaviddoll@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ChampionCoolingSystems\\Dealer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChampionCoolingSystems\\Dealer\\DealerServiceProvider"
+            ]
+        }
+    },
+    "version": "0.1.1"
+}
