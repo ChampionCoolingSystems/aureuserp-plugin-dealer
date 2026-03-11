@@ -7,16 +7,23 @@
             "email": "robertdaviddoll@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "ChampionCoolingSystems\\Dealer\\": "src/"
-        }
-    },
     "extra": {
         "laravel": {
             "providers": [
                 "ChampionCoolingSystems\\Dealer\\DealerServiceProvider"
-            ]
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "ChampionCoolingSystems\\Dealer\\": "src/",
+            "ChampionCoolingSystems\\Dealer\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChampionCoolingSystems\\Dealer\\Tests\\": "tests/"
         }
     },
     "version": "0.1.1"
