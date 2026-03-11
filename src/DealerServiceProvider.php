@@ -17,6 +17,7 @@ class DealerServiceProvider extends PackageServiceProvider
 		$package->name(static::$name)
 			->hasTranslations()
 			->hasMigrations([
+                '2026_03_11_221658_create_dealers_table',
 			])
 			->runsMigrations()
 			->hasInstallCommand(function (InstallCommand $command) {
