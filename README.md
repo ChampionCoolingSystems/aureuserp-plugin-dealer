@@ -29,13 +29,3 @@ composer.json
         ]
         ...
     }
-
-boostrap/providers.php
-
-    <?php
-
-    return [
-        ...,
-        ChampionCoolingSystems\Dealer\DealerServiceProvider::class,
-    ];
-     
