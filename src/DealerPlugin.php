@@ -5,9 +5,11 @@ namespace ChampionCoolingSystems\Dealer;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Webkul\PluginManager\Package;
+use Filament\Navigation\NavigationGroup;
 
 class DealerPlugin implements Plugin
 {
+
     public function getId(): string
     {
         return 'dealers';
@@ -24,7 +26,13 @@ class DealerPlugin implements Plugin
             return;
         }
 
+
         $panel
+            ->navigationGroups([
+                NavigationGroup::make()
+                    ->label('Dealers')
+                    ->icon('icon-employees'),
+            ])
             ->when($panel->getId() == 'admin', function (Panel $panel) {
                 $panel
                     ->discoverResources(

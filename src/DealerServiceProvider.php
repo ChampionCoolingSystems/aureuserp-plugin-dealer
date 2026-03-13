@@ -17,7 +17,7 @@ class DealerServiceProvider extends PackageServiceProvider
 		$package->name(static::$name)
 			->hasTranslations()
 			->hasMigrations([
-                '2026_03_11_221658_create_dealers_table',
+                '2026_03_12_223700_dealers_dealers_table',
 			])
 			->runsMigrations()
 			->hasInstallCommand(function (InstallCommand $command) {
@@ -26,7 +26,7 @@ class DealerServiceProvider extends PackageServiceProvider
 					->runsSeeders();
 			})
 			->hasUninstallCommand(function (UninstallCommand $command) {})
-			->icon('dealers');
+            ->icon('employees');
 	}
 
 	public function packageBooted(): void

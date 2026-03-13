@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dealers', function (Blueprint $table) {
+        Schema::create('dealers_dealers', function (Blueprint $table) {
             $table->id();
             $table->string('firstname')->nullable()->comment('First Name');
             $table->string('lastname')->nullable()->comment('Last Name');
@@ -26,6 +26,7 @@ return new class extends Migration
             $table->unsignedBigInteger('country_id')->nullable()->comment('Country');
             $table->boolean('active')->default(false)->comment('Status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dealers');
+        Schema::dropIfExists('dealers_dealers');
     }
 };
