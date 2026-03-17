@@ -29,6 +29,16 @@ class DealerForm
                                                     ->maxLength(255),
                                             ])
                                             ->collapsible(),
+                                        Section::make('Billing Address')
+                                            ->relationship('billingAddress')
+                                            ->schema([
+                                                TextInput::make('address')->label('Address'),
+                                                TextInput::make('city')->label('City'),
+                                                TextInput::make('state')->label('State'),
+                                                TextInput::make('postcode')->label('Postcode'),
+                                                TextInput::make('country')->label('Country'),
+                                            ])
+                                            ->collapsible(),
                                     ])
                                     ->columnSpan(['lg' => 8]),
                                 Group::make()

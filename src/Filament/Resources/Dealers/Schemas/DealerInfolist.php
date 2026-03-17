@@ -26,6 +26,17 @@ class DealerInfolist
                                                 TextEntry::make('name')->label(__('Name')),
                                             ])
                                             ->collapsible(),
+                                        Section::make('Billing Address')
+                                            ->relationship('billingAddress')
+                                            ->schema([
+                                                TextEntry::make('address')->label('Address'),
+                                                TextEntry::make('city')->label('City'),
+                                                TextEntry::make('state')->label('State'),
+                                                TextEntry::make('postcode')->label('Postcode'),
+                                                TextEntry::make('country')->label('Country'),
+                                            ])
+                                            ->collapsible() 
+                                            ->collapsed(),
                                     ])
                                     ->columnSpan(['lg' => 8]),
                                 Group::make()
