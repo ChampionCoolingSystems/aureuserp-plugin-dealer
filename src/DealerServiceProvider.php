@@ -19,6 +19,7 @@ class DealerServiceProvider extends PackageServiceProvider
 			->hasMigrations([
                 '2026_03_12_223700_create_dealer_dealers_table',
                 '2026_03_16_235738_create_dealer_billing_addresses_table',
+                '2026_03_17_001819_create_dealer_contact_informations_table',
 			])
 			->runsMigrations()
 			->hasInstallCommand(function (InstallCommand $command) {

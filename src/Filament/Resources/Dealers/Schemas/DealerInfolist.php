@@ -26,6 +26,16 @@ class DealerInfolist
                                                 TextEntry::make('name')->label(__('Name')),
                                             ])
                                             ->collapsible(),
+                                        Section::make('Contact Information')
+                                            ->relationship('contactInformation')
+                                            ->schema([
+                                                TextEntry::make('firstname')->label(__('First Name')),
+                                                TextEntry::make('lastname')->label(__('Last Name')),
+                                                TextEntry::make('email')->label(__('Email')),
+                                                TextEntry::make('phone')->label(__('Phone Number')),
+                                                TextEntry::make('fax')->label(__('Fax Number')),
+                                            ])
+                                            ->collapsible(),
                                         Section::make('Billing Address')
                                             ->relationship('billingAddress')
                                             ->schema([

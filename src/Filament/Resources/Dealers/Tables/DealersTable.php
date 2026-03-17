@@ -21,6 +21,8 @@ class DealersTable
             ->columns([
                 TextColumn::make('id')->sortable()->searchable(),
                 TextColumn::make('name')->sortable()->searchable(),
+                TextColumn::make('contactInformation.email')->label('Email Address')->sortable()->searchable(),
+                TextColumn::make('contactInformation.phone')->label('Phone Number')->sortable()->searchable(),
                 ToggleColumn::make('active'),
             ])
             ->defaultSort('id')

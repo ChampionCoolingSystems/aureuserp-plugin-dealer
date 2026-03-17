@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class Dealer extends Model
+class ContactInformation extends Model
 {
-    /** @use HasFactory<\Database\Factories\DealerFactory> */
+    /** @use HasFactory<\Database\Factories\ContactInformationFactory> */
     use HasFactory, SoftDeletes;
 
     /**
@@ -17,7 +17,7 @@ class Dealer extends Model
      *
      * @var string
      */
-    protected $table = 'dealer_dealers';
+    protected $table = 'dealer_contact_informations';
 
     /**
      * The attributes that are mass assignable.
@@ -25,23 +25,19 @@ class Dealer extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'name', 
-        'active', 
+        'dealer_id', 
+        'firstname', 
+        'lastname', 
+        'email', 
+        'phone', 
+        'fax', 
     ];
 
     /**
-     * Get the dealers's contact information.
+     * Get the associated dealer.
      */
-    public function contactInformation(): HasOne
+    public function dealer(): HasOne
     {
-        return $this->hasOne(ContactInformation::class);
-    }
-
-    /**
-     * Get the dealers's billing address.
-     */
-    public function billingAddress(): HasOne
-    {
-        return $this->hasOne(BillingAddress::class);
+        return $this->hasOne(Dealer::class);
     }
 }

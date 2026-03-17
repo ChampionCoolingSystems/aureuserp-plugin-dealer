@@ -29,6 +29,30 @@ class DealerForm
                                                     ->maxLength(255),
                                             ])
                                             ->collapsible(),
+                                        Section::make('Contact Information')
+                                            ->relationship('contactInformation')
+                                            ->schema([
+                                                TextInput::make('firstname')
+                                                    ->label(__('First Name'))
+                                                    ->required()
+                                                    ->maxLength(255),
+                                                TextInput::make('lastname')
+                                                    ->label(__('Last Name'))
+                                                    ->required()
+                                                    ->maxLength(255),
+                                                TextInput::make('email')
+                                                    ->label(__('Email'))
+                                                    ->required()
+                                                    ->email(),
+                                                TextInput::make('phone')
+                                                    ->label(__('Phone Number'))
+                                                    ->required()
+                                                    ->tel(),
+                                                TextInput::make('fax')
+                                                    ->label(__('Fax Number'))
+                                                    ->tel(),
+                                            ])
+                                            ->collapsible(),
                                         Section::make('Billing Address')
                                             ->relationship('billingAddress')
                                             ->schema([
