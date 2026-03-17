@@ -21,26 +21,11 @@ class DealerInfolist
                             ->schema([
                                 Group::make()
                                     ->schema([
-                                        Section::make('Profile')
+                                        Section::make('Dealer Information')
                                             ->schema([
-                                                TextEntry::make('firstname')->label(__('First Name')),
-                                                TextEntry::make('lastname')->label(__('Last Name')),
-                                                TextEntry::make('email')->label(__('Email')),
-                                                TextEntry::make('phone')->label(__('Phone Number')),
-                                                TextEntry::make('fax')->label(__('Fax Number')),
+                                                TextEntry::make('name')->label(__('Name')),
                                             ])
                                             ->collapsible(),
-                                        Section::make('Address')
-                                            ->schema([
-                                                TextEntry::make('company_name')->label('Company Name'),
-                                                TextEntry::make('address')->label('Address'),
-                                                TextEntry::make('city')->label('City'),
-                                                TextEntry::make('state')->label('State'),
-                                                TextEntry::make('postcode')->label('Postcode'),
-                                                TextEntry::make('country')->label('Country'),
-                                            ])
-                                            ->collapsible() 
-                                            ->collapsed(),
                                     ])
                                     ->columnSpan(['lg' => 8]),
                                 Group::make()

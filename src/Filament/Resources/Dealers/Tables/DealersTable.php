@@ -19,14 +19,11 @@ class DealersTable
     {
         return $table
             ->columns([
-                TextColumn::make('firstname'),
-                TextColumn::make('lastname'),
-                TextColumn::make('companyname'),
-                TextColumn::make('email'),
-                TextColumn::make('phone'),
-                TextColumn::make('fax'),
+                TextColumn::make('id')->sortable()->searchable(),
+                TextColumn::make('name')->sortable()->searchable(),
                 ToggleColumn::make('active'),
             ])
+            ->defaultSort('id')
             ->filters([
                 TrashedFilter::make(),
             ])

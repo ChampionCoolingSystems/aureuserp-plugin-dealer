@@ -2,8 +2,8 @@
 
 namespace ChampionCoolingSystems\Dealer\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dealer extends Model
@@ -16,7 +16,7 @@ class Dealer extends Model
      *
      * @var string
      */
-    protected $table = 'dealers_dealers';
+    protected $table = 'dealer_dealers';
 
     /**
      * The attributes that are mass assignable.
@@ -24,17 +24,7 @@ class Dealer extends Model
      * @var list<string>
      */
     protected $fillable = [
-            'firstname', 
-            'lastname', 
-            'companyname', 
-            'email', 
-            'phone', 
-            'fax', 
-            'address', 
-            'city', 
-            'State', 
-            'postcode', 
-            'Country', 
-            'active', 
+        'name', 
+        'active', 
     ];
 }

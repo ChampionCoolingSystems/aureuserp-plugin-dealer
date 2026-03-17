@@ -21,37 +21,12 @@ class DealerForm
                             ->schema([
                                 Group::make()
                                     ->schema([
-                                        Section::make('Profile')
+                                        Section::make('Dealer Information')
                                             ->schema([
-                                                TextInput::make('firstname')
-                                                    ->label(__('First Name'))
+                                                TextInput::make('name')
+                                                    ->label(__('Name'))
                                                     ->required()
                                                     ->maxLength(255),
-                                                TextInput::make('lastname')
-                                                    ->label(__('Last Name'))
-                                                    ->required()
-                                                    ->maxLength(255),
-                                                TextInput::make('email')
-                                                    ->label(__('Email'))
-                                                    ->required()
-                                                    ->email(),
-                                                TextInput::make('phone')
-                                                    ->label(__('Phone Number'))
-                                                    ->required()
-                                                    ->tel(),
-                                                TextInput::make('fax')
-                                                    ->label(__('Fax Number'))
-                                                    ->tel(),
-                                            ])
-                                            ->collapsible(),
-                                        Section::make('Address')
-                                            ->schema([
-                                                TextInput::make('company_name')->label('Company Name'),
-                                                TextInput::make('address')->label('Address'),
-                                                TextInput::make('city')->label('City'),
-                                                TextInput::make('state')->label('State'),
-                                                TextInput::make('postcode')->label('Postcode'),
-                                                TextInput::make('country')->label('Country'),
                                             ])
                                             ->collapsible(),
                                     ])
